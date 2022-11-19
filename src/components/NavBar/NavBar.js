@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React from 'react'
 
-class NavBar extends Component {
-  render() {
-    return <div>NavBar</div>;
-  }
+const Navbar = () => {
+  return (
+    <div>Navbar</div>
+  )
 }
 
-export default NavBar;
+export default Navbar
