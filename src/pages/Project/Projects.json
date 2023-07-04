@@ -1,0 +1,65 @@
+
+{
+    "projects": {
+        "text": "Projects are a great way to apply all our learnings. Here are the ones that I have created.",
+        "list": [
+            {
+                "name": "Settlout",
+                "description": [
+                    "Developed MERN stack web app to support students in adapting to new environments, facilitating settlement process.", 
+                    "Managed the team as a Scrum Master, implementing the factory and observer design patterns while following SDLC."
+                ],
+                "techStack": ["MERN stack", "Postman", "Tailwind", "Stripe API", "SendGrid API", "Twillo"],
+                "links": [
+                    {
+                        "name": "GitHub",
+                        "svg": "GitHub",
+                        "url": "#"
+                    },
+                    {
+                        "name": "Live",
+                        "svg": "Eye",
+                        "url": "https://settleout.onrender.com/"
+                    }
+                ]
+            },
+            {
+                "name": "EnrollEasy",
+                "description": [
+                    "Developed a platform that helps students to find right university and universities missing out on potential revenue.", 
+                    "Implemented the factory and observer design patterns while following SDLC."
+                ],
+                "techStack": ["Angular.Js", "INGINX", "Tailwind", "postgre", "Python", "Flask", "deployed on Dockerized VM by Docker Swarm."],
+                "links": [
+                    {
+                        "name": "GitHub",
+                        "svg": "GitHub",
+                        "url": ""
+                    },
+                    {
+                        "name": "Live",
+                        "svg": "Eye",
+                        "url": "https://24hour.yazdanra.com/"
+                    }
+                ]
+            },
+            {
+                "name": "./WinterFind",
+                "description": ["Winter-Find is a 3D interactive web-based game where the user have to search for a gift in winter world."],
+                "techStack": ["React.js", "Express.js", "Blender", "Node.js", "Three.js", "React Fiber"],
+                "links": [
+                    {
+                        "name": "GitHub",
+                        "svg": "GitHub",
+                        "url": "https://github.com/kartikpatel0170/Winter-Find"
+                    },
+                    {
+                        "name": "Live",
+                        "svg": "Eye",
+                        "url": "https://findurgf-in-winter-io.vercel.app"
+                    }
+                ]
+            }
+        ]
+    }
+}
