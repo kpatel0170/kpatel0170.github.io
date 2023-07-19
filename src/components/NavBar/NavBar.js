@@ -81,6 +81,12 @@ const Navbar = () => {
           >
             <span>Project</span>
           </a>
+          <a
+            href="/resume.pdf"
+            className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded font-bold text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white transition-colors duration-300 ease-in-out"
+          >
+            <span>Resume</span>
+          </a>
         </div>
       </div>
     </nav>
