@@ -1,7 +1,20 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
+  "description": "My portfolio website..!",
   "private": true,
+  "homepage": "https://kpatel0170.onrender.com/",
+  "keywords": [
+    "portfolio",
+    "profile",
+    "personal website",
+    "my projects"
+  ],
+  "author": "Kartik Patel",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kpatel0170/portfolio.git"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -40,5 +53,8 @@
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.23",
     "tailwindcss": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }
