@@ -1,10 +1,16 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 const EducationBlock = ({ education }) => {
+  useEffect(() => {
+    window.gtag('config', 'G-SD76JRWJJP', {
+      page_path: window.location.pathname,
+    });
+  }, []);
+
   return (
     <div className="flex flex-col mb-8">
       <div className="flex items-start">
-        <div className="w-4 h-4 bg-blue-500 rounded-full flex-shrink-0 mt-1"></div>
+        <div className="w-4 h-4 bg-blue-500 absolute -left-2 rounded-full z-10 md:mt-0"></div>
         <div className="ml-4">
           <h2 className="text-xl font-bold">{education.course}</h2>
           <h3 className="text-lg font-medium">{education.institute}</h3>
@@ -40,17 +46,18 @@ const Education = () => {
   const educationData = require("./Education.json");
 
   return (
-    <div className="container mx-auto py-8">
-      <h1 className="text-3xl font-bold mb-4">Education</h1>
-      <div className="space-y-8">
-        {educationData.education.map((education, index) => (
-          <div key={index} className="relative">
-            <EducationBlock education={education} />
-            {index !== educationData.education.length - 1 && (
-              <div className="timeline-connector absolute bg-blue-500 h-full w-px left-2 top-7"></div>
-            )}
+    <div className="flex flex-col justify-center items-center my-10">
+      <div className="relative flex flex-col items-center max-w-[95%] mx-auto p-3">
+        <div className="container mx-auto py-8">
+          <h1 className="text-3xl font-bold mb-4">Education</h1>
+          <div className="space-y-8 border-l-2 border-blue-400">
+            {educationData.education.map((education, index) => (
+              <div key={index} className="relative">
+                <EducationBlock education={education} />
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );
