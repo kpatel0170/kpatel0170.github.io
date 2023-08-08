@@ -1,2 +1,2 @@
 ## Portfolio
-  - By @kartikpatel0170
+  - By @kpatel0170
