@@ -1,83 +1,115 @@
 {
-    "hero": [
-        "Hi! 👋 I’m Kartik Patel",
-        "I’m a Tech Explorer! 🚀",
-        "I'm a CS undergrad student at the University of Regina. I'm passionate about exploring new technologies, building projects, and sharing my knowledge with others. Apart from that, I love meeting new people and learn from their experiences!"
-    ],
-    "technologies": {
+  "heroSection": [
+    {
+      "name": "profile",
+      "text": {
+        "heading": "Hi! 👋 I’m Kartik Patel",
         "list": [
-            {
-                "name": "C++ ",
-                "description": ": My first language!",
-                "url": "https://cplusplus.com/"
-            },
-            {
-                "name": "React.js ",
-                "description": ": My go to library for single-page applications",
-                "url": "https://reactjs.org/"
-            },
-            {
-                "name": "Next.js ",
-                "description": ": Learned for making this website ;-)",
-                "url": "https://nextjs.org/"
-            },
-            {
-                "name": "Express.js ",
-                "description": ": Make a server in minutes",
-                "url": "https://expressjs.com/"
-            },
-            {
-                "name": "MySQL ",
-                "description": ": CS215 : Web Programming",
-                "url": "https://www.mysql.com/"
-            },
-            {
-                "name": "MongoDB ",
-                "description": ": Simple, fast, scalable",
-                "url": "https://www.mongodb.com/"
-            }
-        ],
-        "text": "... and a lot more to get the work done."
+          "CS student at the University of Regina",
+          "Software Developer Intern at FarmSimple",
+          "Tech Enthusiast"
+        ]
+      },
+      "img": "/profile-new.png",
+      "color": "#1127e3",
+      "reverse": true
+    }
+  ],
+  "navSection": {
+    "subheading": "I know it's hard to understand someone too quick. Take a look on my journey....",
+    "cards": [
+      {
+        "heading": "Education",
+        "description": "",
+        "url": "/education"
+      },
+      {
+        "heading": "Experience",
+        "description": "",
+        "url": "/experience"
+      },
+      {
+        "heading": "Projects",
+        "description": "",
+        "url": "/projects"
+      },
+      {
+        "heading": "Resume",
+        "description": "",
+        "url": "/resume"
+      }
+    ]
+  },
+  "technologies": {
+    "list": [
+      {
+        "name": "C++",
+        "description": ": My first language!",
+        "url": "https://cplusplus.com/"
+      },
+      {
+        "name": "React.js",
+        "description": ": My go-to library for single-page applications",
+        "url": "https://reactjs.org/"
+      },
+      {
+        "name": "Next.js",
+        "description": ": Learned for making this website ;-)",
+        "url": "https://nextjs.org/"
+      },
+      {
+        "name": "Express.js",
+        "description": ": Make a server in minutes",
+        "url": "https://expressjs.com/"
+      },
+      {
+        "name": "MySQL",
+        "description": ": CS215: Web Programming",
+        "url": "https://www.mysql.com/"
+      },
+      {
+        "name": "MongoDB",
+        "description": ": Simple, fast, scalable",
+        "url": "https://www.mongodb.com/"
+      }
+    ],
+    "text": "... and a lot more to get the work done."
+  },
+  "sociallinks": [
+    {
+      "name": "LinkedIn",
+      "svg": "linkedin",
+      "url": "https://www.linkedin.com/in/kpatel0170/"
     },
-
-    "connectMeText": "Feel free to reach out to me on any of these",
-    "sociallinks": [
-        {
-          "name": "LinkedIn",
-          "svg": "linkedin",
-          "url": "https://www.linkedin.com/in/kpatel0170/"
-        },
-        {
-          "name": "DevPost",
-          "svg": "dev-to",
-          "url": "https://devpost.com/kpatel0170"
-        },
-        {
-          "name": "Instagram",
-          "svg": "instagram",
-          "url": "https://www.instagram.com/kpatel0170/"
-        },
-        {
-          "name": "GitHub",
-          "svg": "github",
-          "url": "https://github.com/kpatel0170"
-        }
-      ],
-      "profilelinks": [
-        {
-          "name": "LeetCode",
-          "svg": "leetcode",
-          "url": "https://leetcode.com/kartikpatel0170/"
-        },
-        {
-          "name": "GeeksForGeeks",
-          "svg": "GeeksforGeeks",
-          "url": "https://auth.geeksforgeeks.org/user/kartikpatel0170"
-        },
-        {
-          "name": "HackerRank",
-          "svg": "hackerrank",
-          "url": "https://www.hackerrank.com/kartikpatel0170"
-        }
-      ]
+    {
+      "name": "DevPost",
+      "svg": "dev-to",
+      "url": "https://devpost.com/kpatel0170"
+    },
+    {
+      "name": "Instagram",
+      "svg": "instagram",
+      "url": "https://www.instagram.com/kpatel0170/"
+    },
+    {
+      "name": "GitHub",
+      "svg": "github",
+      "url": "https://github.com/kpatel0170"
+    },
+    {
+      "name": "LeetCode",
+      "svg": "leetcode",
+      "url": "https://leetcode.com/kartikpatel0170/"
+    },
+    {
+      "name": "GeeksForGeeks",
+      "svg": "GeeksforGeeks",
+      "url": "https://auth.geeksforgeeks.org/user/kartikpatel0170"
+    },
+    {
+      "name": "HackerRank",
+      "svg": "hackerrank",
+      "url": "https://www.hackerrank.com/kartikpatel0170"
+    }
+  ]
 }
