@@ -19,7 +19,7 @@ function NavSection({ content, children }) {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {content.cards.map((card, index) => (
-            <a href={card.url} target="_blank" rel="noopener noreferrer">
+            <a href={card.url} rel="noopener noreferrer">
               <IconCard
                 key={index}
                 icon={icons[index]}

@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav className="flex items-center bg-gray-800 p-2 flex-wrap">
-      <a href="/" className="p-2 mr-4 inline-flex items-center">
+      <a href="/" rel="noopener noreferrer" className="p-2 mr-4 inline-flex items-center">
         <span className="text-xl text-white font-bold tracking-wide">
           @kpatel0170
         </span>
@@ -59,30 +59,35 @@ const Navbar = () => {
         <div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto">
           <a
             href="/"
+            rel="noopener noreferrer"
             className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded font-bold text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white transition-colors duration-300 ease-in-out"
           >
             <span>Home</span>
           </a>
           <a
             href="/education"
+            rel="noopener noreferrer"
             className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded font-bold text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white transition-colors duration-300 ease-in-out"
           >
             <span>Education</span>
           </a>
           <a
             href="/experience"
+            rel="noopener noreferrer"
             className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded font-bold text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white transition-colors duration-300 ease-in-out"
           >
             <span>Experience</span>
           </a>
           <a
             href="/projects"
+            rel="noopener noreferrer"
             className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded font-bold text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white transition-colors duration-300 ease-in-out"
           >
             <span>Projects</span>
           </a>
           <a
             href="/resume.pdf"
+            rel="noopener noreferrer"
             className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded font-bold text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white transition-colors duration-300 ease-in-out"
           >
             <span>Resume</span>
