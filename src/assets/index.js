@@ -10,4 +10,16 @@ import HackerRank from "./hackerrank.svg";
 import Moon from "./moon.svg";
 import Sun from "./sun.svg";
 
-export { LinkedIn, DevTo, Instagram, Facebook, GitHub, LeetCode, GFG, Eye, HackerRank, Moon, Sun };
+export {
+  LinkedIn,
+  DevTo,
+  Instagram,
+  Facebook,
+  GitHub,
+  LeetCode,
+  GFG,
+  Eye,
+  HackerRank,
+  Moon,
+  Sun,
+};
