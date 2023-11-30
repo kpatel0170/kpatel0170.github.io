@@ -1,9 +1,9 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 
 const ExperienceBlock = ({ experience }) => {
   useEffect(() => {
     // Track page view when the component mounts
-    window.gtag('config', 'G-SD76JRWJJP', {
+    window.gtag("config", "G-SD76JRWJJP", {
       page_path: window.location.pathname,
     });
   }, []);
@@ -14,7 +14,7 @@ const ExperienceBlock = ({ experience }) => {
         <div className="ml-4">
           <h2 className="text-xl font-bold">{experience.role}</h2>
           <h3 className="text-lg font-medium">{experience.company}</h3>
-          <p className="text-sm text-gray-600">{experience.duration}</p>
+          <p className="text-sm text-gray-500">{experience.duration}</p>
           <ul className="list-disc list-inside mt-2">
             {experience.description.map((desc, i) => (
               <li key={i}>{desc}</li>

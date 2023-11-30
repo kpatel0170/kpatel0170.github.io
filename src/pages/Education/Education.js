@@ -1,8 +1,8 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 
 const EducationBlock = ({ education }) => {
   useEffect(() => {
-    window.gtag('config', 'G-SD76JRWJJP', {
+    window.gtag("config", "G-SD76JRWJJP", {
       page_path: window.location.pathname,
     });
   }, []);

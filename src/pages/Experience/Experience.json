@@ -1,13 +1,13 @@
 {
   "header": [
-    "I have one year of professional experience. Here are some details about it."
+    "Here are some details about my working experience:"
   ],
 
   "experience": [
     {
       "company": "FarmSimple Canada Inc.",
       "role": "Junior Developer - Summer student",
-      "duration": "Since May 2023",
+      "duration": "May 2023 - PRESENT",
       "description": [
         "Developed and launched a robust and scalable mobile app using React Native Expo, implementing responsive layouts to ensure optimal user experience and integrating APIs to enable seamless data retrieval and management.",
         "Actively participated in the software development lifecycle (SDLC) and collaborated closely with a the team, demonstrating strong teamwork skills and contributing to the successful delivery of the application."
@@ -18,7 +18,7 @@
     {
       "company": "University of Regina",
       "role": "VP - CSSS, Communication Lead - URGDSC, GitHub Campus Expert",
-      "duration": "Since May 2023",
+      "duration": "Sept 2022 - PRESENT",
       "description": [
         "Empowering students through effective leadership and community building as the 1st ever Github campus Expert in Saskatchewan, Communication Lead at Google Developer Students Club at the University of Regina (URGDSC), and Vice President at Computer Science Students Society (CSSS).",
         "Led a cross-functional team of 10+ people by conducting timed plans and defining positions, goals, and growth"
@@ -29,9 +29,10 @@
     {
       "company": "University of Regina",
       "role": "Lab Instructor",
-      "duration": "Since Jan 2023",
+      "duration": "Jan 2023 - PRESENT",
       "description": [
-        "Responsible for teaching Digital System Architecture (CS201) Labs"
+        "Led 16 lab sessions for 40+ students on topics focusing on System Architecture and Object-oriented programming.",
+        "Evaluated and provided feedback on weekly lab assignments, enabling students to effectively articulate their approaches."
       ],
       "skills": ["Presentation skills"],
       "url": "/"

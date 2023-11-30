@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -9,9 +9,9 @@ const Navbar = () => {
 
   return (
     <nav className="flex items-center bg-gray-800 p-2 flex-wrap">
-      <a href="#" className="p-2 mr-4 inline-flex items-center">
+      <a href="/" className="p-2 mr-4 inline-flex items-center">
         <span className="text-xl text-white font-bold tracking-wide">
-         @kpatel0170
+          @kpatel0170
         </span>
       </a>
       <button
@@ -52,7 +52,7 @@ const Navbar = () => {
       </button>
       <div
         className={`${
-          isNavOpen ? 'block' : 'hidden'
+          isNavOpen ? "block" : "hidden"
         } top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto transition-all duration-300 ease-in-out`}
         id="navigation"
       >
@@ -79,7 +79,7 @@ const Navbar = () => {
             href="/projects"
             className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded font-bold text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white transition-colors duration-300 ease-in-out"
           >
-            <span>Project</span>
+            <span>Projects</span>
           </a>
           <a
             href="/resume.pdf"

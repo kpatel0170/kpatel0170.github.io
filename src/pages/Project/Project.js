@@ -5,14 +5,14 @@ import { useEffect } from "react";
 const ProjectBlock = ({ project }) => {
   useEffect(() => {
     // Track page view when the component mounts
-    window.gtag('config', 'G-SD76JRWJJP', {
+    window.gtag("config", "G-SD76JRWJJP", {
       page_path: window.location.pathname,
     });
   }, []);
   return (
     <div className="flex flex-col mb-8">
       <div className="flex ">
-        <div class="w-4 h-4 bg-blue-500 absolute -left-2  rounded-full z-10 mt-2 md:mt-0"></div>
+        <div className="w-4 h-4 bg-blue-500 absolute -left-2  rounded-full z-10 mt-2 md:mt-0"></div>
         <div className="ml-4">
           <h2 className="text-xl font-bold">{project.name}</h2>
           <ul className="list-disc list-inside mt-2">
