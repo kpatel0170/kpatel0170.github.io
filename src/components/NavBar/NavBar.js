@@ -1,100 +1,77 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Navbar = () => {
-  const [isNavOpen, setIsNavOpen] = useState(false);
-
-  const toggleNav = () => {
-    setIsNavOpen(!isNavOpen);
-  };
+  const [menu, setMenu] = useState(false);
+  const navLinks = [
+    {
+      id: "",
+      title: "Home",
+    },
+    {
+      id: "education",
+      title: "Education",
+    },
+    {
+      id: "experience",
+      title: "Experience",
+    },
+    {
+      id: "projects",
+      title: "Projects",
+    },
+    {
+      id: "resume.pdf",
+      title: "Resume",
+    },
+  ];
 
   return (
-    <nav className="flex items-center bg-gray-800 p-2 flex-wrap">
-      <a href="/" rel="noopener noreferrer" className="p-2 mr-4 inline-flex items-center">
-        <span className="text-xl text-white font-bold tracking-wide">
-          @kpatel0170
-        </span>
-      </a>
-      <button
-        className="text-white inline-flex p-3 hover:bg-gray-900 rounded lg:hidden ml-auto hover:text-white outline-none transition-colors duration-300 ease-in-out"
-        onClick={toggleNav}
-      >
-        {isNavOpen ? (
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
+    <div className="mb-5 md:mb-10">
+      <div className="container px-5 md:px-10 mx-auto relative font-poppins flex items-center justify-between py-8">
+        <div>
+          <h2 className="text-2xl">@kpatel0170</h2>
+        </div>
+
+        <div className="">
+          <ul
+            className={`${
+              menu
+                ? "max-h-[500px] opacity-100"
+                : "max-h-0 opacity-0 pointer-events-none"
+            } flex items-center gap-8 lg:opacity-100 lg:max-h-[500px] capitalize absolute lg:relative top-[80px] right-[20px] p-[20px] lg:p-0 lg:top-0 bg-black z-50 flex-col lg:flex-row rounded-xl lg:w-auto sm:w-full-conten lg:justify-center transition-all duration-500 overflow-hidden sm:w-auto sm:justify-normal`}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        ) : (
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
+            {navLinks.map((item) => (
+              <li key={item.id}>
+                <a href={`/${item.id}`} className="font-[500]">
+                  {item.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          {/* Icon here - burger menu */}
+          <button
+            className="text-white inline-flex p-3 hover:bg-gray-900 rounded lg:hidden ml-auto hover:text-white outline-none transition-colors duration-300 ease-in-out"
+            onClick={() => setMenu(!menu)}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        )}
-      </button>
-      <div
-        className={`${
-          isNavOpen ? "block" : "hidden"
-        } top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto transition-all duration-300 ease-in-out`}
-        id="navigation"
-      >
-        <div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto">
-          <a
-            href="/"
-            rel="noopener noreferrer"
-            className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded font-bold text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white transition-colors duration-300 ease-in-out"
-          >
-            <span>Home</span>
-          </a>
-          <a
-            href="/education"
-            rel="noopener noreferrer"
-            className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded font-bold text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white transition-colors duration-300 ease-in-out"
-          >
-            <span>Education</span>
-          </a>
-          <a
-            href="/experience"
-            rel="noopener noreferrer"
-            className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded font-bold text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white transition-colors duration-300 ease-in-out"
-          >
-            <span>Experience</span>
-          </a>
-          <a
-            href="/projects"
-            rel="noopener noreferrer"
-            className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded font-bold text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white transition-colors duration-300 ease-in-out"
-          >
-            <span>Projects</span>
-          </a>
-          <a
-            href="/resume.pdf"
-            rel="noopener noreferrer"
-            className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded font-bold text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white transition-colors duration-300 ease-in-out"
-          >
-            <span>Resume</span>
-          </a>
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
         </div>
       </div>
-    </nav>
+    </div>
   );
 };
 
