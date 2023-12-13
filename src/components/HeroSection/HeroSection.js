@@ -24,11 +24,11 @@ const HeroSection = ({ data }) => {
   return (
     <div className="mb-[100px]">
       <div
-        className={`flex flex-col items-center gap-[70px] lg-1150:gap-[1000px] ${
+        className={`flex flex-col items-center gap-[70px] lg:pl-10 lg-1150:gap-[1000px] ${
           data.reverse ? "md:flex-row-reverse" : "md:flex-row"
         }`}
       >
-        <div className="flex-1">
+        <div className="flex-1 lg:pl-20">
           <div className="w-[300px] h-[300px] rounded-full overflow-hidden shadow-md border-4 border-white scale-image">
             <img
               src={data.img}
