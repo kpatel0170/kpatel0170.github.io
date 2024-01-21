@@ -21,5 +21,5 @@ export {
   Eye,
   HackerRank,
   Moon,
-  Sun,
+  Sun
 };
