@@ -1,53 +1,66 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
+  const navigate = useNavigate();
+
   const navLinks = [
     {
-      id: "",
+      id: "home",
       title: "Home",
+      path: "/"
     },
     {
       id: "education",
       title: "Education",
+      path: "/education"
     },
     {
       id: "experience",
       title: "Experience",
+      path: "/experience"
     },
     {
       id: "projects",
       title: "Projects",
+      path: "/projects"
     },
     {
-      id: "resume.pdf",
+      id: "resume",
       title: "Resume",
-    },
+      path: "/resume"
+    }
   ];
 
+  const handleLinkClick = (path) => {
+    setMenu(false);
+    navigate(path);
+  };
+
   return (
-    <div className="mb-5 md:mb-10">
+    <div className="">
       <div className="container px-5 md:px-10 mx-auto relative font-poppins flex items-center justify-between py-8">
         <div>
           <h2 className="text-2xl">@kpatel0170</h2>
         </div>
 
-        <div className="">
-          <ul
+        <nav className="">
+          <div
             className={`${
-              menu
-                ? "max-h-[500px] opacity-100"
-                : "max-h-0 opacity-0 pointer-events-none"
-            } flex items-center gap-8 lg:opacity-100 lg:max-h-[500px] capitalize absolute lg:relative top-[80px] right-[20px] p-[20px] lg:p-0 lg:top-0 bg-black z-50 flex-col lg:flex-row rounded-xl lg:w-auto sm:w-full-conten lg:justify-center transition-all duration-500 overflow-hidden sm:w-auto sm:justify-normal`}
+              menu ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+            } flex items-center gap-8 lg:opacity-100 lg:max-h-[100%] capitalize absolute lg:relative top-[80px] right-[20px] p-[20px] lg:p-0 lg:top-0 bg-black z-50 flex-col lg:flex-row lg:w-auto sm:w-full-conten lg:justify-center transition-all duration-500 overflow-hidden sm:w-auto sm:justify-normal`}
           >
             {navLinks.map((item) => (
-              <li key={item.id}>
-                <a href={`/${item.id}`} className="font-[500]">
-                  {item.title}
-                </a>
-              </li>
+              <button
+                key={item.id}
+                className="font-[500] hover:text-blue-500  transition-colors duration-300 ease-in-out"
+                onClick={() => handleLinkClick(item.path)}
+              >
+                {item.title}
+              </button>
             ))}
-          </ul>
+          </div>
 
           {/* Icon here - burger menu */}
           <button
@@ -69,7 +82,7 @@ const Navbar = () => {
               />
             </svg>
           </button>
-        </div>
+        </nav>
       </div>
     </div>
   );
