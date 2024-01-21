@@ -1,45 +1,4 @@
 {
-  "heroSection": [
-    {
-      "name": "profile",
-      "text": {
-        "heading": "Hi! 👋 I’m Kartik Patel",
-        "list": [
-          "CS student at the University of Regina",
-          "Software Developer Intern at FarmSimple",
-          "Tech Enthusiast"
-        ]
-      },
-      "img": "/profile-new.png",
-      "color": "#1127e3",
-      "reverse": true
-    }
-  ],
-  "navSection": {
-    "subheading": "I know it's hard to understand someone too quick. Take a look on my journey....",
-    "cards": [
-      {
-        "heading": "Education",
-        "description": "",
-        "url": "/education"
-      },
-      {
-        "heading": "Experience",
-        "description": "",
-        "url": "/experience"
-      },
-      {
-        "heading": "Projects",
-        "description": "",
-        "url": "/projects"
-      },
-      {
-        "heading": "Resume",
-        "description": "",
-        "url": "/resume"
-      }
-    ]
-  },
   "technologies": {
     "list": [
       {

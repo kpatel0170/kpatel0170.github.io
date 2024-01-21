@@ -4,9 +4,10 @@ const ExperienceBlock = ({ experience }) => {
   useEffect(() => {
     // Track page view when the component mounts
     window.gtag("config", "G-SD76JRWJJP", {
-      page_path: window.location.pathname,
+      page_path: window.location.pathname
     });
   }, []);
+
   return (
     <div className="flex flex-col mb-8">
       <div className="flex items-start">

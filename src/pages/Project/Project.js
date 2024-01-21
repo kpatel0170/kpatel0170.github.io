@@ -1,26 +1,37 @@
-import React from "react";
-
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 const ProjectBlock = ({ project }) => {
+  const [showTech, setShowTech] = useState(false);
+
   useEffect(() => {
     // Track page view when the component mounts
     window.gtag("config", "G-SD76JRWJJP", {
-      page_path: window.location.pathname,
+      page_path: window.location.pathname
     });
   }, []);
+
   return (
     <div className="flex flex-col mb-8">
-      <div className="flex ">
-        <div className="w-4 h-4 bg-blue-500 absolute -left-2  rounded-full z-10 mt-2 md:mt-0"></div>
-        <div className="ml-4">
+      <div className="flex relative">
+        <div className="w-4 h-4 bg-blue-500 absolute -left-2 rounded-full z-10 mt-2 md:mt-0"></div>
+        <div className="ml-4 flex flex-col">
           <h2 className="text-xl font-bold">{project.name}</h2>
           <ul className="list-disc list-inside mt-2">
             {project.description.map((desc, i) => (
               <li key={i}>{desc}</li>
             ))}
           </ul>
-          <p className="mt-2">Tech Stack: {project.techStack.join(", ")}</p>
+          <p className="mt-2">
+            Tech Stack:{" "}
+            <span
+              className={`cursor-pointer text-blue-500 ${
+                showTech ? "underline" : ""
+              }`}
+              onClick={() => setShowTech(!showTech)}
+            >
+              {showTech ? project.techStack.join(", ") : "Show Tech Stack"}
+            </span>
+          </p>
           <div className="flex space-x-4 mt-4">
             {project.links.map((link, i) => (
               <a
@@ -50,8 +61,8 @@ const Project = () => {
   const projects = require("./Projects.json");
 
   return (
-    <div className="flex flex-col justify-center items-center my-10">
-      <div className="relative flex flex-col items-center max-w-[95%] mx-auto p-3">
+    <div className="flex flex-col items-center my-10">
+      <div className="max-w-[95%] mx-auto p-3">
         <div className="container mx-auto py-8">
           <h1 className="text-3xl font-bold mb-4">My Projects</h1>
           <p className="mb-4">{projects.projects.text}</p>

@@ -3,9 +3,12 @@ import React, { useEffect } from "react";
 const EducationBlock = ({ education }) => {
   useEffect(() => {
     window.gtag("config", "G-SD76JRWJJP", {
-      page_path: window.location.pathname,
+      page_path: window.location.pathname
     });
   }, []);
+
+  const renderListItems = (items) =>
+    items.map((item, i) => <li key={i}>{item}</li>);
 
   return (
     <div className="flex flex-col mb-8">
@@ -16,17 +19,13 @@ const EducationBlock = ({ education }) => {
           <h3 className="text-lg font-medium">{education.institute}</h3>
           <p className="text-sm text-gray-600">{education.duration}</p>
           <ul className="list-disc list-inside mt-2">
-            {education.description.map((desc, i) => (
-              <li key={i}>{desc}</li>
-            ))}
+            {renderListItems(education.description)}
           </ul>
           {education.awards && (
             <div className="mt-2">
               <h3 className="text-lg font-medium">Awards:</h3>
               <ul className="list-disc list-inside mt-2">
-                {education.awards.map((award, i) => (
-                  <li key={i}>{award}</li>
-                ))}
+                {renderListItems(education.awards)}
               </ul>
             </div>
           )}
