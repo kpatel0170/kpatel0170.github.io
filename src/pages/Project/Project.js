@@ -1,14 +1,41 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+
+const TechStack = ({ techStack, showTech, setShowTech }) => (
+  <p className="mt-2">
+    Tech Stack:{" "}
+    <span
+      className={`cursor-pointer text-blue-500 ${showTech ? "underline" : ""}`}
+      onClick={() => setShowTech(!showTech)}
+    >
+      {showTech ? techStack.join(", ") : "Show Tech Stack"}
+    </span>
+  </p>
+);
+
+const ProjectLinks = ({ links }) => (
+  <div className="flex space-x-4 mt-4">
+    {links.map((link, i) => (
+      <a
+        key={i}
+        href={link.url}
+        className="inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-gray-700 hover:bg-gray-800 focus:outline-none focus:border-gray-900 focus:shadow-outline-black active:bg-gray-900 transition duration-150 ease-in-out"
+      >
+        <svg
+          className="w-5 h-5 mr-2 -ml-1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path fillRule="evenodd" d={getSvgPath(link.svg)} />
+        </svg>
+        {link.name}
+      </a>
+    ))}
+  </div>
+);
 
 const ProjectBlock = ({ project }) => {
   const [showTech, setShowTech] = useState(false);
-
-  useEffect(() => {
-    // Track page view when the component mounts
-    window.gtag("config", "G-SD76JRWJJP", {
-      page_path: window.location.pathname
-    });
-  }, []);
 
   return (
     <div className="flex flex-col mb-8">
@@ -21,36 +48,8 @@ const ProjectBlock = ({ project }) => {
               <li key={i}>{desc}</li>
             ))}
           </ul>
-          <p className="mt-2">
-            Tech Stack:{" "}
-            <span
-              className={`cursor-pointer text-blue-500 ${
-                showTech ? "underline" : ""
-              }`}
-              onClick={() => setShowTech(!showTech)}
-            >
-              {showTech ? project.techStack.join(", ") : "Show Tech Stack"}
-            </span>
-          </p>
-          <div className="flex space-x-4 mt-4">
-            {project.links.map((link, i) => (
-              <a
-                key={i}
-                href={link.url}
-                className="inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-gray-700 hover:bg-gray-800 focus:outline-none focus:border-gray-900 focus:shadow-outline-black active:bg-gray-900 transition duration-150 ease-in-out"
-              >
-                <svg
-                  className="w-5 h-5 mr-2 -ml-1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path fillRule="evenodd" d={getSvgPath(link.svg)} />
-                </svg>
-                {link.name}
-              </a>
-            ))}
-          </div>
+          <TechStack techStack={project.techStack} showTech={showTech} setShowTech={setShowTech} />
+          <ProjectLinks links={project.links} />
         </div>
       </div>
     </div>

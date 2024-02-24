@@ -10,7 +10,7 @@ const data = {
 };
 
 const HeroSection = () => {
-  const newList = data.list.map((list, i) => (
+  const newList = data.list.map((item, i) => (
     <li className="flex w-full text-lg gap-2" key={i}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,7 @@ const HeroSection = () => {
           d="M9.752 3.137V8.24l-4.42-2.552-2.25 3.899 4.42 2.55-4.42 2.55 2.25 3.898 4.42-2.552v5.104h4.5v-5.104l4.42 2.552 2.25-3.898-4.42-2.55 4.42-2.55-2.25-3.899-4.42 2.552V3.137h-4.5Zm1.5 1.5h1.5v6.202l5.37-3.101.75 1.297-5.37 3.102 5.37 3.101-.75 1.297-5.37-3.1v6.202h-1.5v-6.203l-5.37 3.101-.75-1.297 5.37-3.101-5.37-3.102.75-1.297 5.37 3.101V4.637Z"
         ></path>
       </svg>
-      {list}
+      {item}
     </li>
   ));
 
@@ -35,7 +35,7 @@ const HeroSection = () => {
           {data.heading}
         </h1>
         <div className="py-4 text-lg lg:text-xl xl:text-2xl leading-normal text-gray-600 dark:text-gray-300">
-          <ul className="text-md md:text-lg lg:text-md xl:text-lg font-normal flex flex-col gap-2">
+          <ul className="text-lg font-normal flex flex-col gap-2">
             {newList}
           </ul>
         </div>

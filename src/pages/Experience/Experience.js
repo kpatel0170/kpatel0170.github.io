@@ -1,36 +1,29 @@
-import React, { useEffect } from "react";
+import React from "react";
 
-const ExperienceBlock = ({ experience }) => {
-  useEffect(() => {
-    // Track page view when the component mounts
-    window.gtag("config", "G-SD76JRWJJP", {
-      page_path: window.location.pathname
-    });
-  }, []);
-
+const ExperienceBlock = ({ role, company, duration, description, skills, url }) => {
   return (
     <div className="flex flex-col mb-8">
       <div className="flex items-start">
         <div className="w-4 h-4 bg-blue-500 absolute -left-2 rounded-full z-10 md:mt-0"></div>
         <div className="ml-4">
-          <h2 className="text-xl font-bold">{experience.role}</h2>
-          <h3 className="text-lg font-medium">{experience.company}</h3>
-          <p className="text-sm text-gray-500">{experience.duration}</p>
+          <h2 className="text-xl font-bold">{role}</h2>
+          <h3 className="text-lg font-medium">{company}</h3>
+          <p className="text-sm text-gray-500">{duration}</p>
           <ul className="list-disc list-inside mt-2">
-            {experience.description.map((desc, i) => (
+            {description.map((desc, i) => (
               <li key={i}>{desc}</li>
             ))}
           </ul>
           <div className="mt-2">
             <h3 className="text-lg font-medium">Skills:</h3>
             <ul className="list-disc list-inside pl-6 mt-2">
-              {experience.skills.map((skill, i) => (
+              {skills.map((skill, i) => (
                 <li key={i}>{skill}</li>
               ))}
             </ul>
           </div>
           <a
-            href={experience.url}
+            href={url}
             className="inline-flex items-center mt-4 text-blue-500 hover:text-blue-700"
           >
             Learn More
@@ -53,7 +46,7 @@ const Experience = () => {
           <div className="space-y-8 border-l-2 border-blue-400">
             {experienceData.experience.map((experience, index) => (
               <div key={index} className="relative">
-                <ExperienceBlock experience={experience} />
+                <ExperienceBlock {...experience} />
               </div>
             ))}
           </div>
