@@ -1,73 +1,86 @@
 {
-  "technologies": {
+  "heading": "Hi! 👋 I’m Kartik Patel",
+  "list": [
+    "CS student at the University of Regina",
+    "Software Developer Intern at FarmSimple",
+    "Tech Enthusiast"
+  ],
+  "skills": {
     "list": [
       {
-        "name": "C++",
-        "description": ": My first language!",
-        "url": "https://cplusplus.com/"
+        "type": "Languages",
+        "list": ": C++, Python, Rust, JavaScript, TypeScript, SQL, HTML, CSS, PHP"
       },
       {
-        "name": "React.js",
-        "description": ": My go-to library for single-page applications",
-        "url": "https://reactjs.org/"
+        "type": "Web",
+        "list": "React.js, Next.js, Node.js (Express.js), node-red, Django"
       },
       {
-        "name": "Next.js",
-        "description": ": Learned for making this website ;-)",
-        "url": "https://nextjs.org/"
+        "type": "Mobile",
+        "list": "React Native, Expo"
       },
       {
-        "name": "Express.js",
-        "description": ": Make a server in minutes",
-        "url": "https://expressjs.com/"
+        "type": "Databases",
+        "list": "MongoDB, MySQL, SQLite, PostgreSQL"
       },
       {
-        "name": "MySQL",
-        "description": ": CS215: Web Programming",
-        "url": "https://www.mysql.com/"
+        "type": "Design",
+        "list": "Figma, Adobe XD, Adobe Photoshop, Canva"
       },
       {
-        "name": "MongoDB",
-        "description": ": Simple, fast, scalable",
-        "url": "https://www.mongodb.com/"
+        "type": "Platforms",
+        "list": "AWS, Heroku, Netlify, Vercel, GitHub, Firebase, DigitalOcean"
+      },
+      {
+        "type": "Tools",
+        "list": "Git, Docker, Postman, Wireshark, VS Code, Jupyter Notebook, IntelliJ IDEA"
+      },
+      {
+        "type": "Others",
+        "list": "RESTful APIs, WebSockets, JWT, OAuth, CI/CD, Agile, Scrum"
       }
     ],
-    "text": "... and a lot more to get the work done."
+    "text": "... in process"
   },
   "sociallinks": [
     {
       "name": "LinkedIn",
-      "svg": "linkedin",
+      "icon": "FaLinkedin",
       "url": "https://www.linkedin.com/in/kpatel0170/"
     },
     {
       "name": "DevPost",
-      "svg": "dev-to",
+      "icon": "FaDev",
       "url": "https://devpost.com/kpatel0170"
     },
     {
       "name": "Instagram",
-      "svg": "instagram",
+      "icon": "FaInstagram",
       "url": "https://www.instagram.com/kpatel0170/"
     },
     {
-      "name": "GitHub",
-      "svg": "github",
+      "name": "Github",
+      "icon": "FaGithub",
       "url": "https://github.com/kpatel0170"
     },
     {
+      "name": "Twitter",
+      "icon": "FaTwitter",
+      "url": "https://twitter.com/kpatel0170"
+    },
+    {
       "name": "LeetCode",
-      "svg": "leetcode",
+      "icon": "SiLeetcode",
       "url": "https://leetcode.com/kartikpatel0170/"
     },
     {
       "name": "GeeksForGeeks",
-      "svg": "GeeksforGeeks",
+      "icon": "SiGeeksforgeeks",
       "url": "https://auth.geeksforgeeks.org/user/kartikpatel0170"
     },
     {
       "name": "HackerRank",
-      "svg": "hackerrank",
+      "icon": "FaHackerrank",
       "url": "https://www.hackerrank.com/kartikpatel0170"
     }
   ]
