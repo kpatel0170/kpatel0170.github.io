@@ -1,24 +1,36 @@
 import React from "react";
 
-const ExperienceBlock = ({ role, company, duration, description, skills, url }) => {
+const ExperienceBlock = ({
+  role,
+  company,
+  duration,
+  description,
+  skills,
+  url
+}) => {
   return (
     <div className="flex flex-col mb-8">
       <div className="flex items-start">
-        <div className="w-4 h-4 bg-blue-500 absolute -left-2 rounded-full z-10 md:mt-0"></div>
+        <div className="w-5 h-5 bg-blue-500 absolute -left-[11px] rounded-full z-10 md:mt-0"></div>
         <div className="ml-4">
           <h2 className="text-xl font-bold">{role}</h2>
-          <h3 className="text-lg font-medium">{company}</h3>
-          <p className="text-sm text-gray-500">{duration}</p>
+          <h3 className="text-lg font-medium text-slate-400">{company}</h3>
+          <p className="text-sm text-slate-600">{duration}</p>
           <ul className="list-disc list-inside mt-2">
             {description.map((desc, i) => (
-              <li key={i}>{desc}</li>
+              <li key={i} className="text-slate-400">
+                {" "}
+                {desc}
+              </li>
             ))}
           </ul>
           <div className="mt-2">
-            <h3 className="text-lg font-medium">Skills:</h3>
+            <h3 className="text-lg font-medium text-slate-300">Skills:</h3>
             <ul className="list-disc list-inside pl-6 mt-2">
               {skills.map((skill, i) => (
-                <li key={i}>{skill}</li>
+                <li key={i} className="text-slate-400">
+                  {skill}
+                </li>
               ))}
             </ul>
           </div>

@@ -1,27 +1,42 @@
 import React from "react";
 
-const ListItem = ({ items }) => items.map((item, i) => <li key={i}>{item}</li>);
+const ListItem = ({ items }) =>
+  items.map((item, i) => (
+    <li key={i} className="text-slate-400">
+      {item}
+    </li>
+  ));
 
-const EducationBlock = ({ course, institute, duration, description, awards, url }) => (
+const EducationBlock = ({
+  course,
+  institute,
+  duration,
+  description,
+  awards,
+  url
+}) => (
   <div className="flex flex-col mb-8">
     <div className="flex items-start">
-      <div className="w-4 h-4 bg-blue-500 absolute -left-2 rounded-full z-10 md:mt-0"></div>
+      <div className="w-5 h-5 bg-blue-500 absolute -left-[11px] rounded-full z-10 md:mt-0"></div>
       <div className="ml-4">
         <h2 className="text-xl font-bold">{course}</h2>
-        <h3 className="text-lg font-medium">{institute}</h3>
-        <p className="text-sm text-gray-600">{duration}</p>
+        <h3 className="text-lg font-medium text-slate-400">{institute}</h3>
+        <p className="text-sm text-slate-600">{duration}</p>
         <ul className="list-disc list-inside mt-2">
           <ListItem items={description} />
         </ul>
         {awards && (
           <div className="mt-2">
-            <h3 className="text-lg font-medium">Awards:</h3>
+            <h3 className="text-lg font-medium text-slate-300">Awards:</h3>
             <ul className="list-disc list-inside mt-2">
               <ListItem items={awards} />
             </ul>
           </div>
         )}
-        <a href={url} className="inline-flex items-center mt-4 text-blue-500 hover:text-blue-700">
+        <a
+          href={url}
+          className="inline-flex items-center mt-4 text-blue-500 hover:text-blue-700"
+        >
           Learn More
         </a>
       </div>
