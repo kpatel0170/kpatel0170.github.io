@@ -62,7 +62,7 @@ function NavSection() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {data.cards.map((card, index) => (
-          <Link key={index} onTouchCancel={card.url} rel="noopener noreferrer">
+          <Link key={index} to={card.url} rel="noopener noreferrer">
             <IconCard
               icon={icons[index]}
               heading={card.heading}
