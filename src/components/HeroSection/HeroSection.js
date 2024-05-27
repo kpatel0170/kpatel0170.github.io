@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   FaLinkedin,
   FaDev,
@@ -25,15 +26,15 @@ const renderSocialLinks = (sociallinks) => {
   return sociallinks.map((link, index) => {
     const IconComponent = iconMap[link.icon];
     return (
-      <a
+      <Link
         key={index}
-        href={link.url}
+        to={link.url}
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center  border border-transparent text-sm leading-5 font-medium rounded-md  text-slate-200 hover:text-slate-400 focus:outline-none  focus:shadow-outline-black  transition duration-150 ease-in-out"
       >
         <IconComponent className="w-5 h-5 mr-1" />
-      </a>
+      </Link>
     );
   });
 };
