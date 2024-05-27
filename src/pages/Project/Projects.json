@@ -1,7 +1,7 @@
 
 {
     "projects": {
-        "text": "Projects are a great way to apply all our learnings. Here are the ones that I have created:",
+        "text": "Projects are a great way to apply all our learnings. Here are the ones that I have built:",
         "list": [
             {
                 "name": "Settlout",
@@ -10,15 +10,14 @@
                     "Managed the team as a Scrum Master, implementing the factory and observer design patterns while following SDLC."
                 ],
                 "techStack": ["MERN stack", "Postman", "Tailwind", "Stripe API", "SendGrid API", "Twillo"],
+                "image": "../../assets/projects/settlout.png",
                 "links": [
                     {
                         "name": "GitHub",
-                        "svg": "GitHub",
-                        "url": "#"
+                        "url": "https://github.com/kpatel0170/settleout-frontend"
                     },
                     {
                         "name": "Live",
-                        "svg": "Eye",
                         "url": "https://settleout.onrender.com/"
                     }
                 ]
@@ -33,12 +32,10 @@
                 "links": [
                     {
                         "name": "GitHub",
-                        "svg": "GitHub",
-                        "url": ""
+                        "url": "https://github.com/urgdsc/24hour-winter-2023-frontend"
                     },
                     {
                         "name": "Live",
-                        "svg": "Eye",
                         "url": "https://24hour.yazdanra.com/"
                     }
                 ]
@@ -50,12 +47,10 @@
                 "links": [
                     {
                         "name": "GitHub",
-                        "svg": "GitHub",
                         "url": "https://github.com/kartikpatel0170/Winter-Find"
                     },
                     {
                         "name": "Live",
-                        "svg": "Eye",
                         "url": "https://findurgf-in-winter-io.vercel.app"
                     }
                 ]
@@ -67,12 +62,10 @@
                 "links": [
                     {
                         "name": "GitHub",
-                        "svg": "GitHub",
                         "url": "https://github.com/kpatel0170/SharkTanks"
                     },
                     {
                         "name": "Live",
-                        "svg": "Eye",
                         "url": "https://sharktanks.tech/"
                     }
                 ]
@@ -84,7 +77,6 @@
                 "links": [
                     {
                         "name": "GitHub",
-                        "svg": "GitHub",
                         "url": "https://github.com/kartikpatel0170/Electron"
                     }
                 ]
@@ -96,7 +88,6 @@
                 "links": [
                     {
                         "name": "GitHub",
-                        "svg": "GitHub",
                         "url": "https://github.com/kartikpatel0170/parkAway"
                     }
                 ]
@@ -108,7 +99,6 @@
                 "links": [
                     {
                         "name": "GitHub",
-                        "svg": "GitHub",
                         "url": "https://github.com/kartikpatel0170/CRUD-App"
                     }
                 ]
@@ -120,7 +110,6 @@
                 "links": [
                     {
                         "name": "GitHub",
-                        "svg": "GitHub",
                         "url": "https://github.com/kartikpatel0170/SpyPooch"
                     }
                 ]
