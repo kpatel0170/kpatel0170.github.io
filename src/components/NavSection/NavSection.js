@@ -1,5 +1,10 @@
 import React from "react";
-import { FaGraduationCap, FaCode, FaFolderOpen, FaBookOpen } from 'react-icons/fa';
+import {
+  FaGraduationCap,
+  FaCode,
+  FaFolderOpen,
+  FaBookOpen
+} from "react-icons/fa";
 
 const data = {
   "subheading":

@@ -14,7 +14,7 @@ const routes = [
   { path: "/projects", element: <Project /> },
   { path: "/education", element: <Education /> },
   { path: "/experience", element: <Experience /> },
-  { path: "/resume", element: <Resume /> },
+  { path: "/resume", element: <Resume /> }
 ];
 
 const Layout = ({ children }) => (
