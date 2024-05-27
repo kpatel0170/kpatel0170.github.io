@@ -18,11 +18,11 @@ const routes = [
 ];
 
 const Layout = ({ children }) => (
-  <div className="flex flex-col min-h-screen">
+  <>
     <NavBar />
-    <main className="flex-grow">{children}</main>
+    <main className="">{children}</main>
     <Footer />
-  </div>
+  </>
 );
 
 const App = () => (
