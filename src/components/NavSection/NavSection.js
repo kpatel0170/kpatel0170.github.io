@@ -1,5 +1,5 @@
 import React from "react";
-import { GraduationCap, Code2, FolderGit2, BookOpenCheck } from "lucide-react";
+import { FaGraduationCap, FaCode, FaFolderOpen, FaBookOpen } from 'react-icons/fa';
 
 const data = {
   "subheading":
@@ -43,7 +43,7 @@ function IconCard({ icon: Icon, heading, description }) {
 }
 
 function NavSection() {
-  const icons = [GraduationCap, Code2, FolderGit2, BookOpenCheck];
+  const icons = [FaGraduationCap, FaCode, FaFolderOpen, FaBookOpen];
 
   return (
     <section className="mx-auto flex flex-col items-center gap-8 py-4 px-4 max-w-7xl w-full">
