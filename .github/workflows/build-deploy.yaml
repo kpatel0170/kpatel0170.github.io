@@ -27,7 +27,7 @@ jobs:
             echo "runner=yarn run" >> $GITHUB_OUTPUT
           elif [ -f "${{ github.workspace }}/package-lock.json" ]; then
             echo "manager=npm" >> $GITHUB_OUTPUT
-            echo "command=ci" >> $GITHUB_OUTPUT
+            echo "command=install" >> $GITHUB_OUTPUT
             echo "runner=npm run" >> $GITHUB_OUTPUT
           else
             echo "Unable to determine package manager"
