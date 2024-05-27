@@ -67,7 +67,7 @@ const HeroSection = ({ data }) => {
       </div>
       <div className="p-15 flex justify-center items-center">
         <img
-          src="/profile-new.png"
+          src="./assets/profile-new.png"
           alt="profile-new"
           className="rounded-full shadow-xl md:w-2/3 xl:w-2/3 2xl:w-1/2"
           loading="eager"

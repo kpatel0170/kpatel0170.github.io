@@ -10,7 +10,7 @@
                     "Managed the team as a Scrum Master, implementing the factory and observer design patterns while following SDLC."
                 ],
                 "techStack": ["MERN stack", "Postman", "Tailwind", "Stripe API", "SendGrid API", "Twillo"],
-                "image": "../../assets/projects/settlout.png",
+                "image": "./assets/projects/settlout.png",
                 "links": [
                     {
                         "name": "GitHub",
