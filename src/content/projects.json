@@ -1,0 +1,190 @@
+{
+  "projects": {
+    "text": "Projects are a great way to apply all our learnings. Here are the ones that I have built:",
+    "list": [
+      {
+        "name": "GitHub Field Day Website",
+        "description": [
+          "Developed a website for GitHub Field Day event, a regional unconference for leaders of technical student communities.",
+          "Designed and implemented UI components with dynamic data and ssr rendering."
+        ],
+        "techStack": ["Next.js", "Tailwindcss", "React Leaflet", "Vercel"],
+        "links": [
+          {
+            "name": "Live",
+            "url": "https://githubcampus.expert/field-days/"
+          }
+        ]
+      },
+      {
+        "name": "Settlout",
+        "description": [
+          "Developed MERN stack web app to support students in adapting to new environments, facilitating settlement process.",
+          "Managed the team as a Scrum Master, implementing the factory and observer design patterns while following SDLC."
+        ],
+        "techStack": [
+          "MERN stack",
+          "Postman",
+          "Tailwind",
+          "Stripe API",
+          "SendGrid API",
+          "Twillo"
+        ],
+        "links": [
+          {
+            "name": "GitHub",
+            "url": "https://github.com/kpatel0170/settleout-frontend"
+          },
+          {
+            "name": "Live",
+            "url": "https://settleout.onrender.com/"
+          }
+        ]
+      },
+      {
+        "name": "EnrollEasy",
+        "description": [
+          "Developed a platform that helps students to find right university and universities missing out on potential revenue.",
+          "Implemented the factory and observer design patterns while following SDLC."
+        ],
+        "techStack": [
+          "Angular.Js",
+          "NGINX",
+          "Tailwind",
+          "postgre",
+          "Python",
+          "Flask",
+          "deployed on Dockerized VM by Docker Swarm."
+        ],
+        "links": [
+          {
+            "name": "GitHub",
+            "url": "https://github.com/urgdsc/24hour-winter-2023-frontend"
+          },
+          {
+            "name": "Live",
+            "url": "https://24hour.yazdanra.com/"
+          }
+        ]
+      },
+      {
+        "name": "./WinterFind",
+        "description": [
+          "Winter-Find is a 3D interactive web-based game where the user have to search for a gift in winter world."
+        ],
+        "techStack": [
+          "React.js",
+          "Express.js",
+          "Blender",
+          "Node.js",
+          "Three.js",
+          "React Fiber"
+        ],
+        "links": [
+          {
+            "name": "GitHub",
+            "url": "https://github.com/kartikpatel0170/Winter-Find"
+          },
+          {
+            "name": "Live",
+            "url": "https://findurgf-in-winter-io.vercel.app"
+          }
+        ]
+      },
+      {
+        "name": "SharksTanks",
+        "description": [
+          "Join the battle, forge your destiny. SharkTanks is a 3D multiplayer online game built from scratch."
+        ],
+        "techStack": [
+          "Node.js",
+          "Express.js",
+          "Three.js",
+          "socket.io",
+          "vanilla.js"
+        ],
+        "links": [
+          {
+            "name": "GitHub",
+            "url": "https://github.com/kpatel0170/SharkTanks"
+          },
+          {
+            "name": "Live",
+            "url": "https://sharktanks.tech/"
+          }
+        ]
+      },
+      {
+        "name": "Electron",
+        "description": [
+          "Electron is a ML model that predicts the required consumption of energy so that additional usage of energy can be saved."
+        ],
+        "techStack": [
+          "Jupitor Notebook",
+          "Pandas",
+          "Python",
+          "Flask",
+          "Sklearn"
+        ],
+        "links": [
+          {
+            "name": "GitHub",
+            "url": "https://github.com/kartikpatel0170/Electron"
+          }
+        ]
+      },
+      {
+        "name": "parkAway",
+        "description": [
+          "It is a parking service where clients can post parking lots for rent. And users or customers can send a request to make a deal or contract. It is a kind of Airbnb for parking lots."
+        ],
+        "techStack": [
+          "React.js",
+          "Express.js",
+          "Node.js",
+          "MongoDB",
+          "Bootstrap",
+          "Twilio"
+        ],
+        "links": [
+          {
+            "name": "GitHub",
+            "url": "https://github.com/kartikpatel0170/parkAway"
+          }
+        ]
+      },
+      {
+        "name": "CRUD App",
+        "description": [
+          "A simple CRUD (create, read, update, delete) application using MERN stack."
+        ],
+        "techStack": ["MongoDB", "Express.js", "React.js", "Node.js"],
+        "links": [
+          {
+            "name": "GitHub",
+            "url": "https://github.com/kartikpatel0170/CRUD-App"
+          }
+        ]
+      },
+      {
+        "name": "SpyPooch",
+        "description": [
+          "It keeps track of the users gate and lets them know if they cross it by sending them an SMS and only records when the dog or cat is in the frame."
+        ],
+        "techStack": [
+          "TensorFlow JS",
+          "React JS",
+          "Node JS",
+          "Express JS",
+          "Twilio"
+        ],
+        "links": [
+          {
+            "name": "GitHub",
+            "url": "https://github.com/kartikpatel0170/SpyPooch"
+          }
+        ]
+      }
+    ]
+  }
+}
