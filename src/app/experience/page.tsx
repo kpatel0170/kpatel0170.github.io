@@ -53,7 +53,7 @@ const ExperienceBlock: React.FC<ExperienceProps> = ({
 
 const Experience: React.FC = () => {
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-5xl mx-auto">
       <h1 className="text-3xl font-bold mb-4">Experience</h1>
       <p className="mb-4">{experienceData.header}</p>
       <div className="space-y-8 border-l-2 border-blue-400">

@@ -63,7 +63,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
         <Image
           src="/profile-new.png"
           alt="profile-new"
-          className="rounded-full shadow-xl"
+          className="rounded-full transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500 hover:text-blue-500"
           width={300}
           height={500}
           priority
