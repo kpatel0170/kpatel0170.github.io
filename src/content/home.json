@@ -1,0 +1,75 @@
+{
+  "heading": "Hi! 👋 I’m Kartik Patel",
+  "list": [
+    "CS student at the University of Regina",
+    "Software Developer Intern at FarmSimple",
+    "Tech Enthusiast"
+  ],
+  "skills": {
+    "list": [
+      {
+        "icon": "Code2",
+        "type": "Languages",
+        "list": ": C++, Python, Rust, JavaScript, TypeScript, SQL, HTML, CSS, PHP"
+      },
+      {
+        "icon": "FileCode2",
+        "type": "Web",
+        "list": "React.js, Next.js, Node.js (Express.js), node-red, Django"
+      },
+      {
+        "icon": "Smartphone",
+        "type": "Mobile",
+        "list": "React Native, Expo"
+      },
+      {
+        "icon": "Database",
+        "type": "Databases",
+        "list": "MongoDB, MySQL, SQLite, PostgreSQL"
+      },
+      {
+        "icon": "PenTool",
+        "type": "Design",
+        "list": "Figma, Adobe XD, Adobe Photoshop, Canva"
+      },
+      {
+        "icon": "Cloud",
+        "type": "Platforms",
+        "list": "AWS, Heroku, Netlify, Vercel, GitHub, Firebase, DigitalOcean"
+      },
+      {
+        "icon": "Wrench",
+        "type": "Tools",
+        "list": "Git, Docker, Postman, Wireshark, VS Code, Jupyter Notebook, IntelliJ IDEA"
+      },
+      {
+        "icon": "Cog",
+        "type": "Others",
+        "list": "RESTful APIs, WebSockets, JWT, OAuth, CI/CD, Agile, Scrum"
+      }
+    ],
+    "text": "... in progress"
+  },
+  "sociallinks": [
+    {
+      "name": "LinkedIn",
+      "icon": "Linkedin",
+      "url": "https://www.linkedin.com/in/kpatel0170/"
+    },
+    {
+      "name": "Instagram",
+      "icon": "Instagram",
+      "url": "https://www.instagram.com/kpatel0170/"
+    },
+    {
+      "name": "Github",
+      "icon": "Github",
+      "url": "https://github.com/kpatel0170"
+    },
+    {
+      "name": "Twitter",
+      "icon": "Twitter",
+      "url": "https://twitter.com/kpatel0170"
+    }
+  ]
+}
