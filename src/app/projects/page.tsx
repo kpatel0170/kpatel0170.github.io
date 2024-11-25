@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { Github, Eye } from "lucide-react";
-import Image from "next/image";
 import projects from "@/content/projects.json";
 import ListItem from "@/components/list-item";
 
