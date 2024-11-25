@@ -34,6 +34,8 @@ const ProjectLinks: React.FC<ProjectLinksProps> = ({ links }) => (
           <a
             key={i}
             href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-slate-300 bg-slate-700 hover:bg-slate-800 focus:outline-none focus:border-slate-900 focus:shadow-outline-black active:bg-slate-900 transition duration-150 ease-in-out"
           >
             <Github className="w-5 h-5 mr-2 -ml-1" />
@@ -45,6 +47,8 @@ const ProjectLinks: React.FC<ProjectLinksProps> = ({ links }) => (
           <a
             key={i}
             href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-slate-300 bg-slate-700 hover:bg-slate-800 focus:outline-none focus:border-slate-900 focus:shadow-outline-black active:bg-slate-900 transition duration-150 ease-in-out"
           >
             <Eye className="w-5 h-5 mr-2 -ml-1" />

@@ -40,6 +40,8 @@ const EducationBlock: React.FC<EducationBlockProps> = ({
         <a
           href={url}
           className="inline-flex items-center mt-4 ml-2 text-blue-500 hover:text-blue-700"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Learn More
         </a>
