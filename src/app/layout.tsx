@@ -1,5 +1,4 @@
 import { Poppins } from "next/font/google";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import React from "react";
 import { Metadata } from "next";
 import Navbar from "@/components/navbar";
@@ -36,7 +35,6 @@ export default function RootLayout({
           <Footer />
         </div>
       </body>
-      <GoogleAnalytics gaId="G-XXXXXXXXXX" />
     </html>
   );
 }
