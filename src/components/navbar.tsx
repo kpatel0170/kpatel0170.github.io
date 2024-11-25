@@ -1,9 +1,9 @@
+"use client";
+import Link from "next/link";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
-  const navigate = useNavigate();
 
   const navLinks = [
     {
@@ -33,17 +33,14 @@ const Navbar = () => {
     }
   ];
 
-  const handleLinkClick = (path) => {
-    setMenu(false);
-    navigate(path);
-  };
-
   return (
     <div className="">
       <div className="container px-5 md:px-10 mx-auto relative font-poppins flex items-center justify-between py-8">
-        <div>
-          <h2 className="text-2xl">@kpatel0170</h2>
-        </div>
+        <a href="/" className="cursor-pointer">
+          <h2 className="text-2xl hover:text-blue-500  transition-colors duration-300 ease-in-out">
+            @kpatel0170
+          </h2>
+        </a>
 
         <nav className="">
           <div
@@ -52,13 +49,18 @@ const Navbar = () => {
             } flex items-center gap-8 lg:opacity-100 lg:max-h-[100%] capitalize absolute lg:relative top-[80px] right-[20px] p-[20px] lg:p-0 lg:top-0 bg-black z-50 flex-col lg:flex-row lg:w-auto sm:w-full-conten lg:justify-center transition-all duration-500 overflow-hidden sm:w-auto sm:justify-normal`}
           >
             {navLinks.map((item) => (
-              <button
-                key={item.id}
-                className="font-[500] hover:text-blue-500  transition-colors duration-300 ease-in-out"
-                onClick={() => handleLinkClick(item.path)}
-              >
-                {item.title}
-              </button>
+              <div key={item.id}>
+                <a
+                  key={item.id}
+                  className="font-[500] hover:text-blue-500  transition-colors duration-300 ease-in-out"
+                  href={item.path}
+                  onClick={() => {
+                    setMenu(false);
+                  }}
+                >
+                  {item.title}
+                </a>
+              </div>
             ))}
           </div>
 
