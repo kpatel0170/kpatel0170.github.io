@@ -24,11 +24,11 @@ jobs:
           if [ -f "${{ github.workspace }}/yarn.lock" ]; then
             echo "manager=yarn" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
-            echo "runner=yarn run" >> $GITHUB_OUTPUT
+            echo "runner=yarn" >> $GITHUB_OUTPUT
           elif [ -f "${{ github.workspace }}/package-lock.json" ]; then
             echo "manager=npm" >> $GITHUB_OUTPUT
-            echo "command=install" >> $GITHUB_OUTPUT
-            echo "runner=npm run" >> $GITHUB_OUTPUT
+            echo "command=ci" >> $GITHUB_OUTPUT
+            echo "runner=npx --no-install" >> $GITHUB_OUTPUT
           else
             echo "Unable to determine package manager"
             exit 1
@@ -44,12 +44,12 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
       - name: Build project
-        run: ${{ steps.detect-package-manager.outputs.runner }} build
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build
+          path: ./out
 
   # Deployment job
   deploy:
