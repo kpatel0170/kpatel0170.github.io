@@ -1,21 +1,53 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --background: 0 0% 6.5%;
+  --foreground: 0 0% 95%;
+  --card: 0 0% 10%;
+  --card-foreground: 0 0% 93%;
+  --popover: 0 0% 10%;
+  --popover-foreground: 0 0% 93%;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Primary colors - Blue theme */
+  --primary: 214 88% 60%;
+  --primary-foreground: 0 0% 98%;
+
+  /* Secondary colors */
+  --secondary: 0 0% 18%;
+  --secondary-foreground: 0 0% 90%;
+
+  /* Muted colors */
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 65%;
+
+  /* Accent colors */
+  --accent: 0 0% 18%;
+  --accent-foreground: 0 0% 90%;
+
+  /* Destructive */
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+
+  /* Border and input */
+  --border: 0 0% 25%;
+  --input: 0 0% 25%;
+  --ring: 214 88% 60%;
+
+  /* Radius */
+  --radius: 0.625rem;
+
+  /* Charts */
+  --chart-1: 41 70% 70%;
+  --chart-2: 185 65% 65%;
+  --chart-3: 227 45% 45%;
+  --chart-4: 84 80% 80%;
+  --chart-5: 70 75% 75%;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: "Poppins", Arial, Helvetica, sans-serif;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
 }
