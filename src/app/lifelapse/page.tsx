@@ -6,7 +6,7 @@ import { timelineFrontmatter, timelineSections } from "@/content/timeline";
 import { Timeline } from "@/components/timeline";
 import { TimelineItem } from "@/components/timeline-item";
 
-export default function lifelapsePage() {
+export default function LifelapsePage() {
   const router = useRouter();
 
   useEffect(() => {
