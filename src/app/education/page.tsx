@@ -1,6 +1,9 @@
 import React from "react";
 import educationData from "@/content/education.json";
-import ListItem from "@/components/list-item";
+import { PageHeader } from "@/components/page-header";
+import { Timeline } from "@/components/timeline";
+import { TimelineItem } from "@/components/timeline-item";
+import { Award } from "lucide-react";
 
 interface EducationBlockProps {
   course: string;
@@ -19,48 +22,48 @@ const EducationBlock: React.FC<EducationBlockProps> = ({
   awards,
   url
 }) => (
-  <div className="flex flex-col mb-8">
-    <div className="flex items-start">
-      <div className="w-5 h-5 bg-blue-500 absolute -left-[11px] rounded-full z-10 md:mt-0"></div>
-      <div className="ml-5">
-        <h2 className="text-xl font-bold">{course}</h2>
-        <h3 className="text-lg font-medium text-slate-400">{institute}</h3>
-        <p className="text-sm text-slate-600">{duration}</p>
-        <ul className="list-disc list-inside mt-2">
-          <ListItem items={description} />
+  <TimelineItem
+    title={course}
+    subtitle={institute}
+    duration={duration}
+    description={description}
+    url={url}
+    dotColor="bg-blue-500"
+  >
+    {awards && awards.length > 0 && (
+      <div className="bg-gradient-to-r from-amber-950/30 to-orange-950/30 border border-amber-800/50 rounded-lg p-4">
+        <div className="flex items-center gap-2 mb-3">
+          <Award className="w-5 h-5 text-amber-400" />
+          <h4 className="text-base font-semibold text-amber-100">
+            Awards & Recognition
+          </h4>
+        </div>
+        <ul className="space-y-1 text-sm text-amber-200/80">
+          {awards.map((award, index) => (
+            <li key={index} className="list-disc list-inside">
+              {award}
+            </li>
+          ))}
         </ul>
-        {awards && (
-          <div className="mt-2 ml-2">
-            <h3 className="text-lg font-medium text-slate-300">Awards:</h3>
-            <ul className="list-disc list-inside mt-2">
-              <ListItem items={awards} />
-            </ul>
-          </div>
-        )}
-        <a
-          href={url}
-          className="inline-flex items-center mt-4 ml-2 text-blue-500 hover:text-blue-700"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn More
-        </a>
       </div>
-    </div>
-  </div>
+    )}
+  </TimelineItem>
 );
 
 const Education: React.FC = () => {
   return (
-    <div className="max-w-5xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4">Education</h1>
-      <div className="space-y-8 border-l-2 border-blue-400">
+    <div className="max-w-4xl mx-auto space-y-8">
+      <PageHeader
+        title="Education"
+        description="My academic journey and continuous learning experiences that shape my expertise in computer science and software development."
+        gradient="from-blue-400 to-cyan-400"
+      />
+
+      <Timeline lineColor="from-blue-400 via-blue-500 to-blue-900/70">
         {educationData.education.map((education, index) => (
-          <div key={index} className="relative">
-            <EducationBlock {...education} />
-          </div>
+          <EducationBlock key={index} {...education} />
         ))}
-      </div>
+      </Timeline>
     </div>
   );
 };
