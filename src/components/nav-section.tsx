@@ -47,10 +47,12 @@ const IconCard: React.FC<IconCardProps> = ({
   description
 }) => {
   return (
-    <div className="flex flex-col items-center gap-4 max-w-sm bg-card p-8 rounded-md border border-border cursor-default transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500 hover:text-blue-500">
+    <div className="flex flex-col items-center gap-4 max-w-sm bg-gray-800/50 p-8 rounded-md border border-gray-700/50 cursor-default transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500 hover:text-blue-400">
       {Icon && <Icon className="w-12 h-12 lg:w-16 lg:h-16" />}
-      <h3 className="text-xl lg:text-2xl font-bold text-center">{heading}</h3>
-      <h4 className="text-sm lg:text-md text-center text-muted-foreground">
+      <h3 className="text-xl lg:text-2xl font-bold text-center text-gray-100">
+        {heading}
+      </h3>
+      <h4 className="text-sm lg:text-md text-center text-gray-400">
         {description}
       </h4>
     </div>
@@ -64,7 +66,7 @@ const NavSection: React.FC = () => {
     <section className="mx-auto flex flex-col items-center gap-8 py-4 px-4 max-w-7xl w-full">
       <div className="text-center">
         {data.subheading && (
-          <span className="text-md md:text-md lg:text-lg text-gray-500">
+          <span className="text-md md:text-md lg:text-lg text-gray-400">
             {data.subheading}
           </span>
         )}
