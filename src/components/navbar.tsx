@@ -37,7 +37,7 @@ const Navbar = () => {
     <div className="">
       <div className="container px-5 md:px-10 mx-auto relative font-poppins flex items-center justify-between py-8">
         <a href="/" className="cursor-pointer">
-          <h2 className="text-2xl hover:text-blue-500  transition-colors duration-300 ease-in-out">
+          <h2 className="text-2xl hover:text-blue-400 transition-colors duration-300 ease-in-out">
             @kpatel0170
           </h2>
         </a>
@@ -46,13 +46,13 @@ const Navbar = () => {
           <div
             className={`${
               menu ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-            } flex items-center gap-8 lg:opacity-100 lg:max-h-[100%] capitalize absolute lg:relative top-[80px] right-[20px] p-[20px] lg:p-0 lg:top-0 bg-black z-50 flex-col lg:flex-row lg:w-auto sm:w-full-conten lg:justify-center transition-all duration-500 overflow-hidden sm:w-auto sm:justify-normal`}
+            } flex items-center gap-8 lg:opacity-100 lg:max-h-[100%] capitalize absolute lg:relative top-[80px] right-[20px] p-[20px] lg:p-0 lg:top-0 z-50 flex-col lg:flex-row lg:w-auto sm:w-full-conten lg:justify-center transition-all duration-500 overflow-hidden sm:w-auto sm:justify-normal`}
           >
             {navLinks.map((item) => (
               <div key={item.id}>
                 <a
                   key={item.id}
-                  className="font-[500] hover:text-blue-500  transition-colors duration-300 ease-in-out"
+                  className="font-[500] hover:text-blue-400 transition-colors duration-300 ease-in-out"
                   href={item.path}
                   onClick={() => {
                     setMenu(false);

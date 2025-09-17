@@ -1,20 +1,32 @@
-"use client";
 import React from "react";
-import { Github, Eye } from "lucide-react";
+import { Github, Eye, Code } from "lucide-react";
 import projects from "@/content/projects.json";
-import ListItem from "@/components/list-item";
+import { PageHeader } from "@/components/page-header";
+import { Timeline } from "@/components/timeline";
+import { TimelineItem } from "@/components/timeline-item";
+import { Button } from "@/components/ui/button";
 
 interface TechStackProps {
   techStack: string[];
 }
 
 const TechStack: React.FC<TechStackProps> = ({ techStack }) => (
-  <li className="text-slate-400 ml-2">
-    Tech Stack:{" "}
-    <span className={`cursor-pointer text-slate-500 `}>
-      {techStack.join(", ")}
-    </span>
-  </li>
+  <div className="bg-gradient-to-r from-slate-950/30 to-gray-950/30 border border-slate-800/50 rounded-lg p-4">
+    <div className="flex items-center gap-2 mb-3">
+      <Code className="w-5 h-5 text-slate-400" />
+      <h4 className="text-base font-semibold text-slate-100">Tech Stack</h4>
+    </div>
+    <div className="flex flex-wrap gap-2">
+      {techStack.map((tech, index) => (
+        <span
+          key={index}
+          className="bg-slate-800/50 text-slate-200 px-3 py-1 rounded-full text-sm font-medium border border-slate-700/50"
+        >
+          {tech}
+        </span>
+      ))}
+    </div>
+  </div>
 );
 
 interface ProjectLink {
@@ -27,33 +39,35 @@ interface ProjectLinksProps {
 }
 
 const ProjectLinks: React.FC<ProjectLinksProps> = ({ links }) => (
-  <div className="flex space-x-4 mt-4 ml-2">
+  <div className="flex flex-wrap gap-3">
     {links.map((link, i) => {
       if (link.name === "GitHub") {
         return (
-          <a
-            key={i}
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-slate-300 bg-slate-700 hover:bg-slate-800 focus:outline-none focus:border-slate-900 focus:shadow-outline-black active:bg-slate-900 transition duration-150 ease-in-out"
-          >
-            <Github className="w-5 h-5 mr-2 -ml-1" />
-            {link.name}
-          </a>
+          <Button key={i} variant="outline" size="sm" asChild>
+            <a
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="gap-2 hover:bg-gray-700/50 hover:text-gray-300"
+            >
+              <Github className="w-4 h-4" />
+              {link.name}
+            </a>
+          </Button>
         );
       } else if (link.name === "Live") {
         return (
-          <a
-            key={i}
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-slate-300 bg-slate-700 hover:bg-slate-800 focus:outline-none focus:border-slate-900 focus:shadow-outline-black active:bg-slate-900 transition duration-150 ease-in-out"
-          >
-            <Eye className="w-5 h-5 mr-2 -ml-1" />
-            {link.name}
-          </a>
+          <Button key={i} variant="default" size="sm" asChild>
+            <a
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="gap-2 hover:bg-gray-700/50 hover:text-gray-300"
+            >
+              <Eye className="w-4 h-4" />
+              {link.name}
+            </a>
+          </Button>
         );
       } else {
         return null;
@@ -74,45 +88,37 @@ interface ProjectBlockProps {
   project: Project;
 }
 
-const ProjectBlock: React.FC<ProjectBlockProps> = ({ project }) => {
-  return (
-    <div className="flex flex-col mb-8">
-      <div className="flex relative">
-        <div className="w-5 h-5 bg-blue-500 absolute -left-[11px] rounded-full z-10 md:mt-0"></div>
-        <div className="ml-5 flex flex-col">
-          <h2 className="text-xl font-bold">{project.name}</h2>
-          <ul className="list-disc list-inside mt-2">
-            <ListItem items={project.description} />
-            <TechStack techStack={project.techStack} />
-          </ul>
-          {/* {project.image && (
-            <Image
-              src={project.image}
-              alt={project.name}
-              width={400}
-              height={400}
-              className="mt-4"
-            />
-          )}{" "} */}
-          <ProjectLinks links={project.links} />
-        </div>
-      </div>
+const ProjectBlock: React.FC<ProjectBlockProps> = ({ project }) => (
+  <TimelineItem
+    title={project.name}
+    subtitle=""
+    duration=""
+    description={project.description}
+    url=""
+    dotColor="bg-purple-500"
+    hideExternalLink={true}
+  >
+    <TechStack techStack={project.techStack} />
+    <div className="pt-2">
+      <ProjectLinks links={project.links} />
     </div>
-  );
-};
+  </TimelineItem>
+);
 
 const Project: React.FC = () => {
   return (
-    <div className="max-w-5xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4">My Projects</h1>
-      <p className="mb-4">{projects.projects.text}</p>
-      <div className="space-y-8 border-l-2 border-blue-400">
+    <div className="max-w-4xl mx-auto space-y-8">
+      <PageHeader
+        title="My Projects"
+        description={projects.projects.text}
+        gradient="from-purple-400 to-pink-400"
+      />
+
+      <Timeline lineColor="from-purple-400 via-purple-500 to-purple-900/70">
         {projects.projects.list.map((project, index) => (
-          <div key={index} className="relative">
-            <ProjectBlock project={project} />
-          </div>
+          <ProjectBlock key={index} project={project} />
         ))}
-      </div>
+      </Timeline>
     </div>
   );
 };
