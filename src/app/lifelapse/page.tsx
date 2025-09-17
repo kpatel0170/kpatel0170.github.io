@@ -6,17 +6,17 @@ import { timelineFrontmatter, timelineSections } from "@/content/timeline";
 import { Timeline } from "@/components/timeline";
 import { TimelineItem } from "@/components/timeline-item";
 
-export default function TimelapsePage() {
+export default function lifelapsePage() {
   const router = useRouter();
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const keyParam = urlParams.get("key");
     const validKey =
-      process.env.NEXT_PUBLIC_ACCESS_KEY || "timelapse-access-2024";
+      process.env.NEXT_PUBLIC_ACCESS_KEY || "lifelapse-access-2024";
 
     if (!keyParam || keyParam !== validKey) {
-      router.push("/timelapse/login");
+      router.push("/lifelapse/login");
     }
   }, [router]);
 
@@ -31,7 +31,7 @@ export default function TimelapsePage() {
           </p>
         </div>
         <button
-          onClick={() => router.push("/timelapse/login")}
+          onClick={() => router.push("/lifelapse/login")}
           className="text-sm text-muted-foreground hover:text-foreground transition-colors"
         >
           Change Key

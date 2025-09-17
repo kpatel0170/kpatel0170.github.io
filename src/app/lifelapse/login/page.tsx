@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation";
 
 const VALID_ACCESS_KEY = process.env.NEXT_PUBLIC_ACCESS_KEY;
 
-export default function TimelapseLoginPage() {
+export default function LifelapseLoginPage() {
   const [accessKey, setAccessKey] = useState("");
   const [showKey, setShowKey] = useState(false);
   const [error, setError] = useState("");
@@ -36,7 +36,7 @@ export default function TimelapseLoginPage() {
     await new Promise((resolve) => setTimeout(resolve, 500));
 
     if (accessKey.trim() === VALID_ACCESS_KEY) {
-      router.push(`/timelapse?key=${encodeURIComponent(accessKey.trim())}`);
+      router.push(`/lifelapse?key=${encodeURIComponent(accessKey.trim())}`);
     } else {
       setError("Invalid access key. Please try again.");
     }
@@ -98,7 +98,7 @@ export default function TimelapseLoginPage() {
                 className="w-full bg-blue-500 hover:blue-600"
               >
                 {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                {isLoading ? "Verifying..." : "Access Timelapse"}
+                {isLoading ? "Verifying..." : "Access Lifelapse"}
               </Button>
             </form>
           </CardContent>
