@@ -1,6 +1,6 @@
 import { Poppins } from "next/font/google";
 import React from "react";
-import { Metadata } from "next";
+import metadata from "./metadata";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import "./globals.css";
@@ -11,11 +11,7 @@ const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"]
 });
 
-export const metadata: Metadata = {
-  title: "Kartik Patel",
-  description:
-    "Software Developer | CS student @ UofR | GitHub Campus Expert | Core @ URGDG"
-};
+export { metadata };
 
 export default function RootLayout({
   children
@@ -23,12 +19,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark" suppressHydrationWarning>
       <body className={`${poppins.className} antialiased`}>
-        <div className="flex flex-col min-h-screen bg-black">
+        <div className="flex flex-col min-h-screen bg-background text-foreground">
           <Navbar />
           <main className="flex-grow">
-            <div className="max-w-5xl mx-auto py-8 px-4  px-5 md:px-10">
+            <div className="max-w-5xl mx-auto py-8 px-5 md:px-10">
               {children}
             </div>
           </main>
