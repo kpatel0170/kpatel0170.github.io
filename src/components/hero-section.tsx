@@ -1,9 +1,11 @@
-import React from "react";
-import Link from "next/link";
+import type { CSSProperties } from "react";
 import Image from "next/image";
-import DynamicIcon from "@/components/dynamic-icon";
+import Link from "next/link";
+import { ChevronDown } from "lucide-react";
+import Icon from "@/components/icon";
 
 interface SocialLink {
+  name: string;
   icon: string;
   url: string;
 }
@@ -16,60 +18,78 @@ interface HeroSectionProps {
   };
 }
 
-const renderSocialLinks = (sociallinks: SocialLink[]) => {
-  return sociallinks.map((link, index) => {
-    return (
-      <Link
-        key={index}
-        href={link.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center border border-transparent text-sm leading-5 font-medium rounded-md text-slate-200 hover:text-blue-400 focus:outline-none focus:shadow-outline-black transition duration-150 ease-in-out"
-      >
-        <DynamicIcon name={link.icon} />
-      </Link>
-    );
-  });
-};
+// Mobile stacks the photo on top, centered. Desktop puts the photo right of the text.
+const delay = (ms: number) => ({ "--delay": `${ms}ms` }) as CSSProperties;
 
-const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
-  const newList = data.list.map((item, i) => (
-    <li className="text-left text-lg gap-2" key={i}>
-      <span className="text-slate-400">{"> "}</span>
-      {item}
-    </li>
-  ));
-
-  return (
-    <section className="flex flex-col-reverse lg:flex-row h-[90vh] justify-between md:space-x-4">
-      <div className="lg:w-2/3 flex flex-col justify-center items-center lg:items-start gap-2">
-        <h1 className="text-4xl lg:text-5xl xl:text-5xl font-bold leading-snug tracking-tight text-white">
-          {data.heading}
-        </h1>
-        <div className="py-3 text-lg lg:text-xl xl:text-2xl leading-normal text-gray-300">
-          <ul className="text-lg font-normal flex flex-col gap-2">{newList}</ul>
-        </div>
-
-        <div className="flex flex-col items-center justify-center">
-          <div className="relative rounded-[20px] bg-slate-400/60 shadow-xl p-3">
-            <div className="flex justify-center space-x-4">
-              {renderSocialLinks(data.sociallinks)}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="lg:w-1/3 flex justify-center items-center my-auto">
+// Sits on the layout's content grid, the same left and right edges as the nav
+// and the sections below it. It fills the screen below the 65px header; the
+// md:-mt-16 cancels the main padding on desktop so it starts right under the header.
+const HeroSection = ({ data }: HeroSectionProps) => (
+  <section className="relative flex min-h-[calc(100dvh-65px)] items-center md:-mt-16">
+    <div className="flex w-full flex-col items-center justify-center gap-12 pb-28 text-center md:flex-row md:justify-between md:gap-16 md:pb-32 md:text-left">
+      <div className="rise order-1 shrink-0 md:order-2" style={delay(0)}>
         <Image
           src="/profile-new.png"
-          alt="profile-new"
-          className="rounded-full transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500"
-          width={300}
-          height={500}
+          alt="Profile photo"
+          width={480}
+          height={480}
           priority
+          className="size-64 rounded-full object-cover sm:size-72 md:size-80 lg:size-[22rem]"
         />
       </div>
-    </section>
-  );
-};
+
+      <div className="order-2 flex flex-col items-center md:order-1 md:items-start">
+        <h1
+          className="rise text-5xl leading-[1.05] font-semibold tracking-tight sm:text-6xl lg:text-7xl"
+          style={delay(120)}
+        >
+          {data.heading}
+        </h1>
+        <ul
+          className="rise mt-6 flex flex-col gap-2 text-lg text-muted-foreground md:text-xl"
+          style={delay(220)}
+        >
+          {data.list.map((item) => (
+            <li key={item}>
+              <span aria-hidden="true" className="mr-2 text-subtle-foreground">
+                &gt;
+              </span>
+              {item}
+            </li>
+          ))}
+        </ul>
+
+        <ul
+          className="rise mt-10 flex items-center gap-6 md:gap-7"
+          style={delay(320)}
+        >
+          {data.sociallinks.map((link) => (
+            <li key={link.name}>
+              <Link
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={link.name}
+                className="block text-muted-foreground transition-colors duration-200 hover:text-brand"
+              >
+                <Icon name={link.icon} className="size-8 md:size-9" />
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <div className="absolute inset-x-0 bottom-6 flex justify-center md:bottom-8">
+      <a
+        href="#sections"
+        aria-label="Scroll to sections"
+        className="scroll-cue flex size-11 items-center justify-center rounded-full text-foreground transition-colors hover:text-brand"
+      >
+        <ChevronDown className="size-7" aria-hidden="true" />
+      </a>
+    </div>
+  </section>
+);
 
 export default HeroSection;
