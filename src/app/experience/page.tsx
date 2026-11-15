@@ -1,9 +1,8 @@
 import React from "react";
+import { Briefcase, Wrench } from "lucide-react";
 import experienceData from "@/content/experience.json";
 import { PageHeader } from "@/components/page-header";
-import { Timeline } from "@/components/timeline";
-import { TimelineItem } from "@/components/timeline-item";
-import { Code } from "lucide-react";
+import { Timeline, TimelineDetail, TimelineItem } from "@/components/timeline";
 
 interface ExperienceProps {
   role: string;
@@ -14,6 +13,7 @@ interface ExperienceProps {
   url: string;
 }
 
+/* Renders one role; skills appear as a flat mono list under the details. */
 const ExperienceBlock: React.FC<ExperienceProps> = ({
   role,
   company,
@@ -25,44 +25,34 @@ const ExperienceBlock: React.FC<ExperienceProps> = ({
   <TimelineItem
     title={role}
     subtitle={company}
-    duration={duration}
+    date={duration}
+    icon={<Briefcase />}
     description={description}
     url={url}
-    dotColor="bg-green-500"
   >
     {skills && skills.length > 0 && (
-      <div className="bg-gradient-to-r from-blue-950/30 to-indigo-950/30 border border-blue-800/50 rounded-lg p-4">
-        <div className="flex items-center gap-2 mb-3">
-          <Code className="w-5 h-5 text-blue-400" />
-          <h4 className="text-base font-semibold text-blue-100">
-            Technologies & Skills
-          </h4>
-        </div>
-        <div className="flex flex-wrap gap-2">
-          {skills.map((skill, index) => (
-            <span
-              key={index}
-              className="bg-blue-900/50 text-blue-200 px-3 py-1 rounded-full text-sm font-medium border border-blue-700/50"
-            >
-              {skill}
-            </span>
+      <TimelineDetail label="Technologies" icon={Wrench}>
+        <ul className="flex flex-wrap gap-x-4 gap-y-2 font-mono text-sm text-foreground/80">
+          {skills.map((skill) => (
+            <li key={skill}>{skill}</li>
           ))}
-        </div>
-      </div>
+        </ul>
+      </TimelineDetail>
     )}
   </TimelineItem>
 );
 
 const Experience: React.FC = () => {
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <div className="mx-auto max-w-4xl">
       <PageHeader
+        eyebrow="Work history"
+        icon={Briefcase}
         title="Experience"
         description={experienceData.header[0]}
-        gradient="from-green-400 to-emerald-400"
       />
 
-      <Timeline lineColor="from-green-400 via-green-500 to-green-900/70">
+      <Timeline>
         {experienceData.experience.map((experience, index) => (
           <ExperienceBlock key={index} {...experience} />
         ))}

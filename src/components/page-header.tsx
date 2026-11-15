@@ -1,28 +1,36 @@
 import React from "react";
+import type { LucideIcon } from "lucide-react";
 
 interface PageHeaderProps {
+  eyebrow?: string;
+  icon?: LucideIcon;
   title: string;
   description?: string;
-  gradient?: string;
 }
 
+// Short mono eyebrow above the title. The description is optional.
 export const PageHeader: React.FC<PageHeaderProps> = ({
+  eyebrow,
+  icon: Icon,
   title,
-  description,
-  gradient = "from-primary to-blue-500"
+  description
 }) => {
   return (
-    <div className="text-center space-y-4 mb-12">
-      <h1
-        className={`text-4xl md:text-5xl font-bold bg-gradient-to-r ${gradient} bg-clip-text text-transparent`}
-      >
+    <header className="rise mb-14 space-y-5 border-b border-border pb-12">
+      {eyebrow && (
+        <p className="flex items-center gap-2 font-mono text-xs tracking-wider text-subtle-foreground uppercase">
+          {Icon && <Icon className="size-3.5" aria-hidden="true" />}
+          {eyebrow}
+        </p>
+      )}
+      <h1 className="text-4xl font-semibold tracking-tight md:text-6xl">
         {title}
       </h1>
       {description && (
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground">
           {description}
         </p>
       )}
-    </div>
+    </header>
   );
 };
