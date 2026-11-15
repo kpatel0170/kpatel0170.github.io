@@ -10,7 +10,7 @@
       {
         "icon": "Code2",
         "type": "Languages",
-        "list": ": C++, Python, Rust, JavaScript, TypeScript, SQL, HTML, CSS, PHP"
+        "list": "C++, Python, Rust, JavaScript, TypeScript, SQL, HTML, CSS, PHP"
       },
       {
         "icon": "FileCode2",
