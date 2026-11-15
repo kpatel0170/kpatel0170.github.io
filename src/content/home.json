@@ -8,14 +8,24 @@
   "skills": {
     "list": [
       {
+        "icon": "Bot",
+        "type": "AI & Agents",
+        "list": "Agentic workflows, agent loops, agent harnesses and evals, MCP servers, RAG, LLM APIs"
+      },
+      {
+        "icon": "Waypoints",
+        "type": "Vector & Data",
+        "list": "Vector databases (pgvector, Pinecone), embeddings and semantic search, data pipelines, pandas, scikit-learn"
+      },
+      {
         "icon": "Code2",
         "type": "Languages",
-        "list": "C++, Python, Rust, JavaScript, TypeScript, SQL, HTML, CSS, PHP"
+        "list": "Python, TypeScript, JavaScript, Rust, C++, SQL, HTML, CSS"
       },
       {
         "icon": "FileCode2",
         "type": "Web",
-        "list": "React.js, Next.js, Node.js (Express.js), node-red, Django"
+        "list": "React.js, Next.js, Tailwind CSS, Node.js, Express.js, Three.js, Django"
       },
       {
         "icon": "Smartphone",
@@ -25,27 +35,22 @@
       {
         "icon": "Database",
         "type": "Databases",
-        "list": "MongoDB, MySQL, SQLite, PostgreSQL"
-      },
-      {
-        "icon": "PenTool",
-        "type": "Design",
-        "list": "Figma, Adobe XD, Adobe Photoshop, Canva"
+        "list": "PostgreSQL, MongoDB, MySQL, SQLite"
       },
       {
         "icon": "Cloud",
         "type": "Platforms",
-        "list": "AWS, Heroku, Netlify, Vercel, GitHub, Firebase, DigitalOcean"
+        "list": "Vercel, AWS, Netlify, GitHub, Firebase, DigitalOcean"
       },
       {
         "icon": "Wrench",
         "type": "Tools",
-        "list": "Git, Docker, Postman, Wireshark, VS Code, Jupyter Notebook, IntelliJ IDEA"
+        "list": "Git, Docker, Claude Code, Postman, VS Code, Jupyter Notebook, Wireshark"
       },
       {
-        "icon": "Cog",
-        "type": "Others",
-        "list": "RESTful APIs, WebSockets, JWT, OAuth, CI/CD, Agile, Scrum"
+        "icon": "Workflow",
+        "type": "Practices",
+        "list": "RESTful APIs, WebSockets, JWT, OAuth, CI/CD, observability, Agile, Scrum"
       }
     ],
     "text": "... in progress"
