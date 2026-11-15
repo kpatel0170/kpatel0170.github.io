@@ -1,13 +1,15 @@
 import { createElement } from "react";
 import type { LucideIcon } from "lucide-react";
 import {
+  Bot,
   Cloud,
   Cog,
   Code2,
   Database,
   FileCode2,
-  PenTool,
   Smartphone,
+  Waypoints,
+  Workflow,
   Wrench
 } from "lucide-react";
 import { siGithub, siInstagram, siX } from "simple-icons";
@@ -23,7 +25,9 @@ const lucideIcons = new Map<string, LucideIcon>([
   ["Code2", Code2],
   ["Database", Database],
   ["FileCode2", FileCode2],
-  ["PenTool", PenTool],
+  ["Bot", Bot],
+  ["Waypoints", Waypoints],
+  ["Workflow", Workflow],
   ["Smartphone", Smartphone],
   ["Wrench", Wrench]
 ]);
